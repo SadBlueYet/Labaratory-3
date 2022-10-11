@@ -6,14 +6,19 @@
 int main()
 {
 	setlocale(LC_ALL, "ru");
-	float routeLength, distanceInOneDay;
+	float routeLength = 10, distanceInOneDay;
 	int days = 1;
 	float percent;
 	FILE* f_output, * f_input;
-
-
+pair <float, float> pairOfDistance = input(routeLength, &distanceInOneDay);
+pair <float, float>  input(float* routeLength, float* distanceInOneDay) {
+	pair <float, float> pairOfDistance;
+	pairOfDistance.first = routeLength;
+	pairOfDistance.second = distanceInOneDay;
+	return pairOfDistance;
+}
 	f_input = fopen("pohod.txt", "r");
-
+cout >> routeLength; \\ 11
 	if (f_input == 0)
 	{
 		printf("Ошибка при окрытии файла\n");
